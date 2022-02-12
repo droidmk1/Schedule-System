@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/css/normalize.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="icon" type="image/png" href="static/css/img/gato1.png" sizes="32x32" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<title>Horarios</title>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for message in messages %}
+		<h1>{{ message }}</h1>
+		{% endfor %}
+	{% endif %}
+	{% endwith %}
+	<script src="https://kit.fontawesome.com/b11650a0a6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- <h1>Horarios</h1> -->
+	<div class="cover">
+		<div class="system-titulo">
+			<h1>Gestion de Horarios</h1>
+		</div>
+		<!-- INICIO WAVE -->
+		<div class="bg_color"></div>
+		<div class="wave w1"></div>
+		<div class="wave w2"></div>
+		<!-- FIN WAVE -->
+
+		<div class="system-contenedor-imagen system-contenedor-imagen--horario">
+			<div class="system-contenedor-principal system-contenedor-principal--derecha">
+				<div class="system-contenedor-principal__titulo">
+					<h2>Horario</h2>
+				</div>
+				<div class="system-contenedor-principal__botones">
+					<a href="/verHorarios">
+						<button class="system-contenedor-principal__boton"><i class="fas fa-eye"></i> Ver</button>
+					</a>
+					<a href="/crearHorarios">
+						<button class="system-contenedor-principal__boton"><i class="far fa-plus-square"></i>
+							Crear</button>
+					</a>
+					<a href="/system">
+						<button class="system-contenedor-principal__boton"><i class="fas fa-home"></i> Inicio</button>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="univ">
+			<img src="../static/css/img/university.png" alt="">
+		</div>
+		<div class="sanmarcos">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/UNMSM_coatofarms_seal.svg/1200px-UNMSM_coatofarms_seal.svg.png"
+				alt="">
+		</div>
+	</div>
+</body>
+
+</html>

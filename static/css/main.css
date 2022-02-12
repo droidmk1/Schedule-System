@@ -1,0 +1,938 @@
+/* body {
+	background-image: url("img/bg.jpg");
+	background-size: auto;
+}
+
+.ContenedorLogin {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.contenedor1 {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+h1{
+	color: white;
+	text-align: center;
+}
+
+h2{
+	color:rgb(255, 255, 255);
+}
+
+h3{
+	color:rgb(255, 255, 255);
+}
+
+table{
+	background-color: #00ccffc9;
+	font-family: arial,sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+}
+
+caption{
+	background-color: #4400ff;
+	border: 1px solid #000000;
+	text-align: center;
+	text-decoration: double;
+	padding: 8px;
+	font-family: arial, sans-serif;
+	font-weight: bolder;
+}
+
+td, th{
+	border: 1px solid #000000;
+	padding: 8px;
+} */
+
+/* tr:nth-child(odd){
+	background-color: #0066ff;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem  = 10px*/
+	margin: 0;
+	padding: 0;
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+.bg-index{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.603),rgba(0, 0, 0, 0.603)),url("./img/bg3.jpg");
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.contenedor-principal{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: auto;
+	background-color: #fff;
+	border-radius: .4rem;
+	overflow: hidden;
+}
+@media(min-width:768px) {
+	.contenedor-principal{
+		width: 40rem;
+	}
+}
+@media(min-width:1400px) {
+	.contenedor-principal{
+		width:60rem;
+	}
+}
+.shadow-lg{
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.411)!important;
+}
+/* INDEX: LOGIN */
+.ContenedorLogin {
+	margin: auto;
+	padding: 1rem;
+	margin: 2rem 2rem 1rem 2rem;
+	overflow: hidden;
+}
+@media(min-width:576px) {
+	.ContenedorLogin{
+		margin-bottom: 0rem;
+	}
+}
+.ContenedorLogin__img{
+	width: 100%;
+	margin: .5rem 0rem;
+}
+@media(min-width:376px) {
+	.ContenedorLogin__img{
+		width: 80%;
+		margin: auto;
+		margin-bottom: 2rem;
+	}
+}
+@media(min-width:769px) {
+	.ContenedorLogin__img{
+		width: 53%;
+		margin: auto;
+		margin-bottom: 1rem;
+	}
+	
+}
+
+.ContenedorLogin__img img{
+	width: 100%;
+	margin: 1rem 0rem;
+	padding: .5rem 0rem;
+	border-top: 1px gray solid ;
+	border-bottom: 1px gray solid ;
+}
+
+.ContenedorLogin__legend{
+	margin-bottom: 1rem;
+	font-size: 2rem;
+	font-weight: 700;
+	text-align: center;
+}
+@media(min-width:576px) {
+	.ContenedorLogin__legend{
+		text-align: start;
+	}
+}
+@media(min-width:1400px) {
+	.ContenedorLogin__legend{
+		margin-bottom: 1.5rem;
+		font-size: 2.5rem;
+	}
+}
+.ContenedorLogin__input{
+	margin: 1rem 0;
+	font-size: 1.5rem;
+}
+@media(min-width:1400px) {
+	.ContenedorLogin__input{
+		font-size: 2rem;
+	}
+}
+.content-login{
+	overflow: hidden;
+}
+.barline{
+	display: block;
+	background: linear-gradient(90deg, rgba(0,83,99,1) 0%, rgba(9,9,121,1) 46%, rgba(0,212,255,1) 100%);
+	height: 3px;
+	margin: 0;
+	position: relative;
+	left: -100%;
+	transition: all 1s ease;
+}
+.ContenedorLogin__input:focus + .barline{
+	left: 0;
+} 
+.ContenedorLogin__input:focus{
+	border-bottom:1px solid rgba(128, 128, 128, 0.219);
+}
+.ContenedorLogin__input--email{
+	border: none;
+	border-bottom: solid 1px gray;
+	outline: none;
+	display: block;
+	width: 100%;
+	margin-bottom: 0;
+	transition: all .5s linear;
+}
+.ContenedorLogin__input--btn{
+	width: 100%;
+	padding: 1rem 0;
+	margin-bottom: 0;
+}
+@media(min-width:576px) {
+	.ContenedorLogin__input--btn{
+		float:right;
+		width: auto;
+		padding: .5rem .5rem;
+	}
+}
+.ContenedorLogin__input--btn,
+.ContenedorLogin__icon{
+	font-size: 1rem;
+}
+@media(min-width:1400px) {
+	.ContenedorLogin__input--btn,
+	.ContenedorLogin__icon{
+		font-size: 2rem;
+	}
+}
+
+.contenedor-principal__footer{
+	clear: both;
+	background-color: rgba(128, 128, 128, 0.226);
+	padding: 2.5rem;
+	font-size: 1.05rem;
+	letter-spacing: 0.05rem;
+}
+@media(min-width:1400px) {
+	.contenedor-principal__footer{
+		font-size: 1.5rem;
+	}
+}
+@media(min-width:2400px) {
+	.contenedor-principal__footer{
+		font-size: 1.7rem;
+		letter-spacing: 0.1rem;
+	}
+}
+
+/*! -------------------- SYSTEM ------------------- */
+
+/*? ---fondo wave--- */
+.cover{
+    width: 100%;
+	height: 100vh;
+    padding-bottom: 120px;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+.bg_color{
+	width: 100%;
+	height: 40%;
+	background: #1520A6;
+	position: absolute;
+	top: 0;
+}
+@media(min-height:601px) {
+	.bg_color{
+		height: 50%;
+	}
+}
+@media(min-height:790px) {
+	.bg_color{
+		height: 60%;
+	}
+}
+@media(min-height:982px) {
+	.bg_color{
+		height: 67%;
+	}
+}
+@media(min-height:1368px) {
+	.bg_color{
+		height: 72%;
+	}
+}
+.wave{
+	width: 6000px;
+	height: 100%;
+	position: absolute;
+	top: 0;	
+	left: 0;
+	background-image: url(./img/wd1.svg);
+	background-position: bottom;
+}
+
+.w1{
+	animation: w1 7s linear infinite;
+}
+
+@keyframes w1{
+	0%{
+		margin-left: 0;
+	}
+	100%{
+		margin-left: -1600px;
+	}
+}
+.w2{
+	/* -.125 = retraso */
+	animation: w2 7s linear -.125s infinite ,desplazamiento 7s ease -.125s infinite;
+	opacity: 0.5;
+}
+@keyframes w2{
+	0%{
+		margin-left: 0;
+	}
+	100%{
+		margin-left: -1600px;
+	}
+}
+@keyframes desplazamiento{
+	0%,100%{
+		transform: translateY(-25px);
+	}
+	50%{
+		transform: translateY(10px);
+	}
+}
+
+/*? ------Contenedor de botones----- */
+
+.system-contenedor-imagen{
+	background: url('./img/lap.jpg');
+	background-position: center right;
+	background-size: cover;
+	padding: 2rem;
+	position: relative;
+	width: 30rem;
+	height: 30rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 0 1rem black;
+	border-radius: .5rem;
+	z-index: 10;
+}
+@media(min-width:768px) {
+	.system-contenedor-imagen{
+		width: 60rem;
+		background-size: auto 120%;
+		background-repeat: no-repeat;
+		background-color: #fff;
+	}
+}
+@media(min-width:1368px) {
+	.system-contenedor-imagen{
+		width: 100rem;
+		height: 35rem;
+		background-size: auto 120%;
+		background-repeat: no-repeat;
+		background-color: #fff;
+	}
+}
+/*! -------- PROFESORES------------- */
+.system-contenedor-imagen--profesores{
+	background: url('./img/profes.jpg');
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 2rem;
+	position: relative;
+}
+@media(min-width:768px) {
+	.system-contenedor-imagen--profesores{
+		width: 60rem;
+		background-size: auto 120%;
+		background-repeat: no-repeat;
+		background-color: #fff;
+	}
+}
+@media(min-width:1368px) {
+	.system-contenedor-imagen--profesores{
+		width: 100rem;
+		height: 35rem;
+		background-size: auto 120%;
+		background-repeat: no-repeat;
+		background-color: #fff;
+	}
+}
+/*! --------------------- */
+.system-contenedor-principal{
+	position: absolute;
+	text-align: center;
+	background-color: rgba(45, 84, 85, 0.589);
+	border-radius: 1rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem;
+	gap: 2rem;
+}
+@media(min-width:768px) {
+	.system-contenedor-principal{
+		left:30%;
+
+	}
+}
+@media(min-width:1368px) {
+	.system-contenedor-principal{
+		height: 20rem;
+		width: 40rem;
+		left: 25%;
+	}
+}
+
+/*? ----BOTONES----  */
+
+.system-contenedor-principal__botones{
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
+.system-contenedor-principal__titulo h2{
+	color:white;
+	font-family: dongle ;
+	font-size: 3rem;
+	letter-spacing: 2px;
+}
+.system-contenedor-principal__boton{
+	display: inline-block;
+	/* padding: 1rem 1.5rem; */
+	background-color: rgb(0, 0, 0);
+	color: white;
+	font-size: 1.2rem;
+	transition: .5s all;
+	border: none;
+	border-radius: 1rem;
+	height: 6rem;
+	width: 7rem;
+	text-align: center;
+	cursor: pointer;
+
+}
+@media(min-width:1368px) {
+	.system-contenedor-principal__boton{
+		font-size: 2rem;
+		height:7rem;
+		width: 12rem;
+	}
+	
+}
+@media(min-width:1440px) {
+	.system-contenedor-principal__titulo h2{
+		font-size: 5rem;
+		margin-bottom: 0;
+	}
+}
+
+.system-contenedor-principal__boton:hover{
+	color: black;
+	background-color: white;
+	box-shadow: 0 0 .5rem black;
+}
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.system-titulo{
+	display: block;
+	margin-top: 3rem;
+	padding: .5rem 1rem;
+	text-align: center;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid #fff;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.system-titulo h1{
+	color: white;
+	font-size: 2rem;
+	font-family: 'Oswald', sans-serif;
+	font-family: 'Prata', serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0;
+}
+@media(min-width:430px) {
+	.system-titulo h1{
+		font-size: 3rem;
+	}
+}
+
+
+
+/* LOGOS */
+.univ{
+	width: 10rem;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.univ img{
+	width: 100%;
+}
+/* SM */
+.sanmarcos{
+	margin: 1.5rem;
+	width: 6rem;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+@media(min-width:740px) {
+	.sanmarcos{
+		top: 0;
+	width: 10rem;
+
+	}
+}
+.sanmarcos img{
+	width: 100%;
+}
+
+
+
+
+/*!  ------------------------HORARIOS------------------------*/
+
+.system-contenedor-imagen--horario{
+	background: url('img/horario.jpg');
+	background-position: center left;
+	background-size: cover;
+	padding: 2rem;
+	position: relative;
+}
+@media(min-width:768px) {
+	.system-contenedor-imagen--horario{
+		width: 60rem;
+		background-size: auto 120%;
+		background-repeat: no-repeat;
+		background-color: #fff;
+	}
+}
+@media(min-width:1368px) {
+	.system-contenedor-imagen--horario{
+		width: 100rem;
+		height: 35rem;
+		background-size: auto 120%;
+		background-repeat: no-repeat;
+		background-color: #fff;
+	}
+}
+
+
+@media(min-width:768px) {
+	.system-contenedor-principal--derecha{
+		left:60%;
+	}
+}
+@media(min-width:1368px) {
+	.system-contenedor-principal--derecha{
+		height: 25rem;
+		width: 43rem;
+		left: 75%;
+		transform: translate(-60%,-50%);
+	}
+}
+
+/*!  ------------------------VER - HORARIOS------------------------*/
+
+/*? -----------background----------- */
+.body{
+	margin: 0;
+	padding: 0;
+}
+.bg-verhorarios{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	overflow: auto;
+	background: #E8EAF6;
+
+}
+/* .bg-verhorarios::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(rgba(128, 128, 128, 0.541),rgba(128, 128, 128, 0.541)),url('img/f1.jpg');
+	background: #E8EAF6; 
+	background-size: cover;
+	filter: opacity(.8);
+	background-position: center center;
+} */
+
+.relative{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*? ------------------------Tabla de Horarios------------------------ */
+
+.contenedor-tabla-horarios{
+	width:100%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.tabla-horarios{
+	background-color: rgba(255, 255, 255, 0.801);
+	width: 90%;
+	border-collapse: collapse;
+	text-align: center;
+	border-radius: 1rem;
+}
+@media(min-width:768px) {
+	.tabla-horarios{
+		width: 60%;
+	}
+}
+.tabla-horarios__row:hover{
+	background-color: #E8EAF6;
+}
+.tabla-horarios__head{
+	font-size: 2rem;
+}
+.tabla-horarios__data{
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.tabla-horarios__head,
+.tabla-horarios__data{
+	border: 1px solid black;
+	border-radius: 	1rem;
+	font-family: 'Dongle', sans-serif;
+	padding: 1rem ;
+}
+
+@media(min-width:769px) {
+	.tabla-horarios__head{
+		font-size: 2.5rem;
+	}	
+	.tabla-horarios__data{
+		font-size: 2rem;
+	}
+}
+@media(min-width:2400px) {
+	.tabla-horarios__head{
+		font-size: 7rem;
+	}	
+	.tabla-horarios__data{
+		font-size: 6rem;
+	}
+	.tabla-horarios__head,
+	.tabla-horarios__data{
+		padding: 3rem;
+	}	
+}
+.system-titulo--negro{
+	margin-top: 10rem;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+.system-titulo--negro h1{
+		color: black;
+		font-size: 3.5rem;
+}
+.tabla-horarios__boton{
+	display: inline-block;
+	background-color: white;
+	color: crimson;
+	border: 1px solid crimson ;
+	padding: 1rem;
+	text-decoration: none;
+	line-height: 10px;
+	border-radius: .5rem;
+	transition: all .3s linear;
+}
+@media(min-width:2400px) {
+	.tabla-horarios__boton{
+	border-radius: 1rem;
+
+	}
+}
+.tabla-horarios__boton:hover{
+	background-color:crimson ;
+	color: white;
+	border: 1px solid white;
+}
+.system-contenedor-principal__boton--horario{
+	margin: 2rem;
+	position: absolute;
+	bottom:0;
+	right:0;
+}
+
+/*! --------------CREAR HORARIOS-------------  */
+.contenedor-form{
+	text-align: center;
+	background: rgba(255, 255, 255, 0.548);
+	border: 1px solid black;
+	padding: .5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 0 1rem .1rem rgba(0, 0, 0, 0.507);
+}
+
+@media(min-width:768px) {
+	.contenedor-form{
+		width:40%;
+		margin: 2rem auto;
+	}
+}
+
+@media(min-width:2400px) {
+	.contenedor-form{
+		width:60%;
+	}
+}
+
+.crearHorario__form{
+	margin: 2rem;
+}
+@media(min-width:2400px) {
+	.crearHorario__form{
+		width: 70%;
+		margin: auto;
+	}
+}
+
+.crearHorario__legend{
+	font-size: 5rem;
+	font-family: dongle;
+	margin: 2rem 0;
+	margin-bottom: 3rem;
+}
+@media(min-width:2400px) {
+	.crearHorario__legend{
+		font-size: 8rem;
+		font-weight: 700;
+	}
+}
+.crearHorario__campo{
+	display:flex ;
+	margin-bottom: 2rem;
+	width: 100%;
+}
+.crearHorario__field{
+	flex: 0  0 8rem;
+	text-align: right;
+	padding-right: 1rem;
+	line-height: 3;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+@media(min-width:2400px) {
+
+	.crearHorario__field{
+		font-size: 3rem;
+		text-align:end;
+		padding-right: 8rem;
+	}
+}
+.crearHorario__input,
+.crearHorario__select{
+	flex: 1;
+	margin-right: 1rem;
+	outline: none;
+	border: 1px solid gainsboro;
+	border-radius: 5px;
+	padding: 0 .5rem;
+	font-size: 1.3rem;
+}
+@media(min-width:2400px) {
+	.crearHorario__input,
+	.crearHorario__select{
+		font-size: 3rem;
+		padding: 0 2rem;
+}
+}
+.crearHorario__select .select__option{
+	background-color:gainsboro ;
+}
+
+
+.crearHorario__campo--derecha{
+	justify-content: center;
+	margin-right: 2rem;
+}
+.crearHorario__submit{
+	display: inline-block;
+	color: white;
+	border: 2px solid rgba(231, 157, 60, 0.952) ;
+	border-radius: 1rem ;
+	padding: 1rem 1rem;
+	background-color: rgba(231, 157, 60, 0.952);
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	transition: all .3s linear;
+}
+.crearHorario__submit:hover{
+	color: rgba(231, 157, 60, 0.952);
+	background-color: white;
+	border: 2px solid rgba(231, 157, 60, 0.952) ;
+
+}
+.system-contenedor-principal__boton--form{
+	float: right;
+	height: 6rem;
+	margin: 2rem;
+}
+@media(min-width:2400px) {
+	.system-contenedor-principal__boton--form{
+		height: 7rem;
+		margin: 2rem;
+	}
+	
+}
+
+
+@media(max-height:621px) {
+	.sanmarcos--crearHorarios{
+		display: none;
+	}
+}
+@media(min-width:2400px) {
+	.sanmarcos--crearHorarios{
+		width: 20rem;
+		margin: 5rem;
+	}
+}
+
+/*! -----------------MAKE SHEADULE-------------------  */
+
+.center-vertical{
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.contenedor-form-scheadule{
+	text-align: center;
+	background: rgba(255, 255, 255, 0.548);
+	position: relative;
+	height: 100vh;
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+}
+@media(min-width:364px) {
+	.contenedor-form-scheadule{
+		margin:2rem auto;
+		height: 95vh;
+	}
+}
+@media(min-width:768px) {
+	.contenedor-form-scheadule{
+		border: 1px solid black;
+		box-shadow: 0 0 1rem .1rem rgba(0, 0, 0, 0.507);
+		width:40%;
+		height: 90vh;
+		margin: 2rem auto;
+	}
+}
+@media(min-width:2400px) {
+	.contenedor-form-scheadule{
+		width:60%;
+		height: 90vh;
+		overflow: scroll;
+	}
+}
+.system-contenedor-principal__boton--form-sheadule{
+	display: none;
+}
+
+@media(min-width:768px) {
+	.mostrar{
+		display: none;
+	}
+	.system-contenedor-principal__boton--form-sheadule{
+		display: inline-block;
+		position: absolute;
+		height: 7rem;
+		bottom: 0;
+		right: 0;
+	}
+}
+caption{
+	background-color: #4400ff;
+	border: 1px solid #000000;
+	text-align: center;
+	text-decoration: double;
+	padding: 8px;
+	font-family: arial, sans-serif;
+	font-weight: bolder;
+}
+
+/*! -------------FINAL HORARIO--------------- */
+
+.final-horario{
+	position: relative;
+	margin: 2rem;
+	display: flex;
+	/* height: 90%; */
+	flex-direction: column;
+	gap: 1.5rem;
+}
+@media(min-width:768px) {
+	.final-horario{
+		width: 60%;
+		margin: 2rem auto;
+		font-size: 1.8rem;
+		padding: 2rem;
+		border-radius: .6rem;
+		box-shadow: 0 0 1rem 0.1rem;
+	}
+}
+.final-horario h1{
+	text-align: center;
+	font-size: 4rem;
+	font-family: dongle;
+}
+.centrar-texto{
+	text-align: center;
+}
+@media(min-width:768px) {
+	.btn{
+		font-size: 1.5rem;
+		padding: .375rem 1rem;
+	}
+}

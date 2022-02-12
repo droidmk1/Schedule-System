@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="static/css/img/gato1.png" sizes="32x32"/>
+	<title>profes_dispo</title>
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<script src="https://kit.fontawesome.com/b11650a0a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- <h1>profes_dispo</h1>
+	<div class="container">
+		<table>
+			<form action="/profes_disponibilidad" method="post">
+				<input type="text" name="nombre" placeholder="Profesor">
+				<input type="submit" value="Finalizar">
+			<tr>
+				<th>Horas</th>
+				<th>Lunes</th>
+				<th>Martes</th>
+				<th>Miercoles</th>
+				<th>Jueves</th>
+				<th>Viernes</th>
+				<th>Sabado</th>
+			</tr>
+			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+				<tr>
+					<td>
+						8 - 9
+					</td>
+					<td>
+						<input type="checkbox" name="L_8_9" class="btn-check" id="L_8_9" autocomplete="off" value="L_8_9">
+						<label class="btn btn-outline-primary" for="L_8_9">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_8_9" class="btn-check" id="M_8_9" autocomplete="off" value="M_8_9">
+						<label class="btn btn-outline-primary" for="M_8_9">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_8_9" class="btn-check" id="Mi_8_9" autocomplete="off" value="Mi_8_9">
+						<label class="btn btn-outline-primary" for="Mi_8_9">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_8_9" class="btn-check" id="J_8_9" autocomplete="off" value="J_8_9">
+						<label class="btn btn-outline-primary" for="J_8_9">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_8_9" class="btn-check" id="V_8_9" autocomplete="off" value="V_8_9">
+						<label class="btn btn-outline-primary" for="V_8_9">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_8_9" class="btn-check" id="S_8_9" autocomplete="off" value="S_8_9">
+						<label class="btn btn-outline-primary" for="S_8_9">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						9 - 10
+					</td>
+					<td>
+						<input type="checkbox" name="L_9_10" class="btn-check" id="L_9_10" autocomplete="off" value="L_9_10">
+						<label class="btn btn-outline-primary" for="L_9_10">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_9_10" class="btn-check" id="M_9_10" autocomplete="off" value="M_9_10">
+						<label class="btn btn-outline-primary" for="M_9_10">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_9_10" class="btn-check" id="Mi_9_10" autocomplete="off" value="Mi_9_10">
+						<label class="btn btn-outline-primary" for="Mi_9_10">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_9_10" class="btn-check" id="J_9_10" autocomplete="off" value="J_9_10">
+						<label class="btn btn-outline-primary" for="J_9_10">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_9_10" class="btn-check" id="V_9_10" autocomplete="off" value="V_9_10">
+						<label class="btn btn-outline-primary" for="V_9_10">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_9_10" class="btn-check" id="S_9_10" autocomplete="off" value="S_9_10">
+						<label class="btn btn-outline-primary" for="S_9_10">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						10 - 11
+					</td>
+					<td>
+						<input type="checkbox" name="L_10_11" class="btn-check" id="L_10_11" autocomplete="off" value="L_10_11">
+						<label class="btn btn-outline-primary" for="L_10_11">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_10_11" class="btn-check" id="M_10_11" autocomplete="off" value="M_10_11">
+						<label class="btn btn-outline-primary" for="M_10_11">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_10_11" class="btn-check" id="Mi_10_11" autocomplete="off" value="Mi_10_11">
+						<label class="btn btn-outline-primary" for="Mi_10_11">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_10_11" class="btn-check" id="J_10_11" autocomplete="off" value="J_10_11">
+						<label class="btn btn-outline-primary" for="J_10_11">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_10_11" class="btn-check" id="V_10_11" autocomplete="off" value="V_10_11">
+						<label class="btn btn-outline-primary" for="V_10_11">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_10_11" class="btn-check" id="S_10_11" autocomplete="off" value="S_10_11">
+						<label class="btn btn-outline-primary" for="S_10_11">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						11 - 12
+					</td>
+					<td>
+						<input type="checkbox" name="L_11_12" class="btn-check" id="L_11_12" autocomplete="off" value="L_11_12">
+						<label class="btn btn-outline-primary" for="L_11_12">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_11_12" class="btn-check" id="M_11_12" autocomplete="off" value="M_11_12">
+						<label class="btn btn-outline-primary" for="M_11_12">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_11_12" class="btn-check" id="Mi_11_12" autocomplete="off" value="Mi_11_12">
+						<label class="btn btn-outline-primary" for="Mi_11_12">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_11_12" class="btn-check" id="J_11_12" autocomplete="off" value="J_11_12">
+						<label class="btn btn-outline-primary" for="J_11_12">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_11_12" class="btn-check" id="V_11_12" autocomplete="off" value="V_11_12">
+						<label class="btn btn-outline-primary" for="V_11_12">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_11_12" class="btn-check" id="S_11_12" autocomplete="off" value="S_11_12">
+						<label class="btn btn-outline-primary" for="S_11_12">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						12 - 13
+					</td>
+					<td>
+						<input type="checkbox" name="L_12_13" class="btn-check" id="L_12_13" autocomplete="off" value="L_12_13">
+						<label class="btn btn-outline-primary" for="L_12_13">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_12_13" class="btn-check" id="M_12_13" autocomplete="off" value="M_12_13">
+						<label class="btn btn-outline-primary" for="M_12_13">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_12_13" class="btn-check" id="Mi_12_13" autocomplete="off" value="Mi_12_13">
+						<label class="btn btn-outline-primary" for="Mi_12_13">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_12_13" class="btn-check" id="J_12_13" autocomplete="off" value="J_12_13">
+						<label class="btn btn-outline-primary" for="J_12_13">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_12_13" class="btn-check" id="V_12_13" autocomplete="off" value="V_12_13">
+						<label class="btn btn-outline-primary" for="V_12_13">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_12_13" class="btn-check" id="S_12_13" autocomplete="off" value="S_12_13">
+						<label class="btn btn-outline-primary" for="S_12_13">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						13 - 14
+					</td>
+					<td>
+						<input type="checkbox" name="L_13_14" class="btn-check" id="L_13_14" autocomplete="off" value="L_13_14">
+						<label class="btn btn-outline-primary" for="L_13_14">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_13_14" class="btn-check" id="M_13_14" autocomplete="off" value="M_13_14">
+						<label class="btn btn-outline-primary" for="M_13_14">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_13_14" class="btn-check" id="Mi_13_14" autocomplete="off" value="Mi_13_14">
+						<label class="btn btn-outline-primary" for="Mi_13_14">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_13_14" class="btn-check" id="J_13_14" autocomplete="off" value="J_13_14">
+						<label class="btn btn-outline-primary" for="J_13_14">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_13_14" class="btn-check" id="V_13_14" autocomplete="off" value="V_13_14">
+						<label class="btn btn-outline-primary" for="V_13_14">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_13_14" class="btn-check" id="S_13_14" autocomplete="off" value="S_13_14">
+						<label class="btn btn-outline-primary" for="S_13_14">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						14 - 15
+					</td>
+					<td>
+						<input type="checkbox" name="L_14_15" class="btn-check" id="L_14_15" autocomplete="off" value="L_14_15">
+						<label class="btn btn-outline-primary" for="L_14_15">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_14_15" class="btn-check" id="M_14_15" autocomplete="off" value="M_14_15">
+						<label class="btn btn-outline-primary" for="M_14_15">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_14_15" class="btn-check" id="Mi_14_15" autocomplete="off" value="Mi_14_15">
+						<label class="btn btn-outline-primary" for="Mi_14_15">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_14_15" class="btn-check" id="J_14_15" autocomplete="off" value="J_14_15">
+						<label class="btn btn-outline-primary" for="J_14_15">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_14_15" class="btn-check" id="V_14_15" autocomplete="off" value="V_14_15">
+						<label class="btn btn-outline-primary" for="V_14_15">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_14_15" class="btn-check" id="S_14_15" autocomplete="off" value="S_14_15">
+						<label class="btn btn-outline-primary" for="S_14_15">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						15 - 16
+					</td>
+					<td>
+						<input type="checkbox" name="L_15_16" class="btn-check" id="L_15_16" autocomplete="off" value="L_15_16">
+						<label class="btn btn-outline-primary" for="L_15_16">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_15_16" class="btn-check" id="M_15_16" autocomplete="off" value="M_15_16">
+						<label class="btn btn-outline-primary" for="M_15_16">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_15_16" class="btn-check" id="Mi_15_16" autocomplete="off" value="Mi_15_16">
+						<label class="btn btn-outline-primary" for="Mi_15_16">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_15_16" class="btn-check" id="J_15_16" autocomplete="off" value="J_15_16">
+						<label class="btn btn-outline-primary" for="J_15_16">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_15_16" class="btn-check" id="V_15_16" autocomplete="off" value="V_15_16">
+						<label class="btn btn-outline-primary" for="V_15_16">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_15_16" class="btn-check" id="S_15_16" autocomplete="off" value="S_15_16">
+						<label class="btn btn-outline-primary" for="S_15_16">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						16 - 17
+					</td>
+					<td>
+						<input type="checkbox" name="L_16_17" class="btn-check" id="L_16_17" autocomplete="off" value="L_16_17">
+						<label class="btn btn-outline-primary" for="L_16_17">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_16_17" class="btn-check" id="M_16_17" autocomplete="off" value="M_16_17">
+						<label class="btn btn-outline-primary" for="M_16_17">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_16_17" class="btn-check" id="Mi_16_17" autocomplete="off" value="Mi_16_17">
+						<label class="btn btn-outline-primary" for="Mi_16_17">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_16_17" class="btn-check" id="J_16_17" autocomplete="off" value="J_16_17">
+						<label class="btn btn-outline-primary" for="J_16_17">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_16_17" class="btn-check" id="V_16_17" autocomplete="off" value="V_16_17">
+						<label class="btn btn-outline-primary" for="V_16_17">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_16_17" class="btn-check" id="S_16_17" autocomplete="off" value="S_16_17">
+						<label class="btn btn-outline-primary" for="S_16_17">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						17 - 18
+					</td>
+					<td>
+						<input type="checkbox" name="L_17_18" class="btn-check" id="L_17_18" autocomplete="off" value="L_17_18">
+						<label class="btn btn-outline-primary" for="L_17_18">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_17_18" class="btn-check" id="M_17_18" autocomplete="off" value="M_17_18">
+						<label class="btn btn-outline-primary" for="M_17_18">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_17_18" class="btn-check" id="Mi_17_18" autocomplete="off" value="Mi_17_18">
+						<label class="btn btn-outline-primary" for="Mi_17_18">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_17_18" class="btn-check" id="J_17_18" autocomplete="off" value="J_17_18">
+						<label class="btn btn-outline-primary" for="J_17_18">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_17_18" class="btn-check" id="V_17_18" autocomplete="off" value="V_17_18">
+						<label class="btn btn-outline-primary" for="V_17_18">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_17_18" class="btn-check" id="S_17_18" autocomplete="off" value="S_17_18">
+						<label class="btn btn-outline-primary" for="S_17_18">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						18 - 19
+					</td>
+					<td>
+						<input type="checkbox" name="L_18_19" class="btn-check" id="L_18_19" autocomplete="off" value="L_18_19">
+						<label class="btn btn-outline-primary" for="L_18_19">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_18_19" class="btn-check" id="M_18_19" autocomplete="off" value="M_18_19">
+						<label class="btn btn-outline-primary" for="M_18_19">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_18_19" class="btn-check" id="Mi_18_19" autocomplete="off" value="Mi_18_19">
+						<label class="btn btn-outline-primary" for="Mi_18_19">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_18_19" class="btn-check" id="J_18_19" autocomplete="off" value="J_18_19">
+						<label class="btn btn-outline-primary" for="J_18_19">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_18_19" class="btn-check" id="V_18_19" autocomplete="off" value="V_18_19">
+						<label class="btn btn-outline-primary" for="V_18_19">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_18_19" class="btn-check" id="S_18_19" autocomplete="off" value="S_18_19">
+						<label class="btn btn-outline-primary" for="S_18_19">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						19 - 20
+					</td>
+					<td>
+						<input type="checkbox" name="L_19_20" class="btn-check" id="L_19_20" autocomplete="off" value="L_19_20">
+						<label class="btn btn-outline-primary" for="L_19_20">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_19_20" class="btn-check" id="M_19_20" autocomplete="off" value="M_19_20">
+						<label class="btn btn-outline-primary" for="M_19_20">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_19_20" class="btn-check" id="Mi_19_20" autocomplete="off" value="Mi_19_20">
+						<label class="btn btn-outline-primary" for="Mi_19_20">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_19_20" class="btn-check" id="J_19_20" autocomplete="off" value="J_19_20">
+						<label class="btn btn-outline-primary" for="J_19_20">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_19_20" class="btn-check" id="V_19_20" autocomplete="off" value="V_19_20">
+						<label class="btn btn-outline-primary" for="V_19_20">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_19_20" class="btn-check" id="S_19_20" autocomplete="off" value="S_19_20">
+						<label class="btn btn-outline-primary" for="S_19_20">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						20 - 21
+					</td>
+					<td>
+						<input type="checkbox" name="L_20_21" class="btn-check" id="L_20_21" autocomplete="off" value="L_20_21">
+						<label class="btn btn-outline-primary" for="L_20_21">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_20_21" class="btn-check" id="M_20_21" autocomplete="off" value="M_20_21">
+						<label class="btn btn-outline-primary" for="M_20_21">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_20_21" class="btn-check" id="Mi_20_21" autocomplete="off" value="Mi_20_21">
+						<label class="btn btn-outline-primary" for="Mi_20_21">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_20_21" class="btn-check" id="J_20_21" autocomplete="off" value="J_20_21">
+						<label class="btn btn-outline-primary" for="J_20_21">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_20_21" class="btn-check" id="V_20_21" autocomplete="off" value="V_20_21">
+						<label class="btn btn-outline-primary" for="V_20_21">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_20_21" class="btn-check" id="S_20_21" autocomplete="off" value="S_20_21">
+						<label class="btn btn-outline-primary" for="S_20_21">si</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						21 - 22
+					</td>
+					<td>
+						<input type="checkbox" name="L_21_22" class="btn-check" id="L_21_22" autocomplete="off" value="L_21_22">
+						<label class="btn btn-outline-primary" for="L_21_22">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="M_21_22" class="btn-check" id="M_21_22" autocomplete="off" value="M_21_22">
+						<label class="btn btn-outline-primary" for="M_21_22">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="Mi_21_22" class="btn-check" id="Mi_21_22" autocomplete="off" value="Mi_21_22">
+						<label class="btn btn-outline-primary" for="Mi_21_22">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="J_21_22" class="btn-check" id="J_21_22" autocomplete="off" value="J_21_22">
+						<label class="btn btn-outline-primary" for="J_21_22">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="V_21_22" class="btn-check" id="V_21_22" autocomplete="off" value="V_21_22">
+						<label class="btn btn-outline-primary" for="V_21_22">si</label>
+					</td>
+					<td>
+						<input type="checkbox" name="S_21_22" class="btn-check" id="S_21_22" autocomplete="off" value="S_21_22">
+						<label class="btn btn-outline-primary" for="S_21_22">si</label>
+					</td>
+				</tr>
+			</div>
+			</form>
+		</table>
+	</div> -->
+	<div class="bg-verhorarios">
+		<div class="final-horario">
+			<h1>Disponibilidad de Profesores</h1>
+			<table class="centrar-texto">
+				<form action="/profes_disponibilidad" method="post">
+					<input style="outline: none;" type="text" name="nombre" placeholder="Profesor">
+					<input style="outline: none;" type="text" name="codigo" placeholder="Codigo">
+					<input type="submit" value="Finalizar">
+				<tr>
+					<th>Horas</th>
+					<th>Lunes</th>
+					<th>Martes</th>
+					<th>Miercoles</th>
+					<th>Jueves</th>
+					<th>Viernes</th>
+					<th>Sabado</th>
+				</tr>
+				<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+					<tr>
+						<td>
+							8 - 9
+						</td>
+						<td>
+							<input type="checkbox" name="L_8_9" class="btn-check" id="L_8_9" autocomplete="off" value="L_8_9">
+							<label class="btn btn-outline-primary" for="L_8_9">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_8_9" class="btn-check" id="M_8_9" autocomplete="off" value="M_8_9">
+							<label class="btn btn-outline-primary" for="M_8_9">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_8_9" class="btn-check" id="Mi_8_9" autocomplete="off" value="Mi_8_9">
+							<label class="btn btn-outline-primary" for="Mi_8_9">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_8_9" class="btn-check" id="J_8_9" autocomplete="off" value="J_8_9">
+							<label class="btn btn-outline-primary" for="J_8_9">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_8_9" class="btn-check" id="V_8_9" autocomplete="off" value="V_8_9">
+							<label class="btn btn-outline-primary" for="V_8_9">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_8_9" class="btn-check" id="S_8_9" autocomplete="off" value="S_8_9">
+							<label class="btn btn-outline-primary" for="S_8_9">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							9 - 10
+						</td>
+						<td>
+							<input type="checkbox" name="L_9_10" class="btn-check" id="L_9_10" autocomplete="off" value="L_9_10">
+							<label class="btn btn-outline-primary" for="L_9_10">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_9_10" class="btn-check" id="M_9_10" autocomplete="off" value="M_9_10">
+							<label class="btn btn-outline-primary" for="M_9_10">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_9_10" class="btn-check" id="Mi_9_10" autocomplete="off" value="Mi_9_10">
+							<label class="btn btn-outline-primary" for="Mi_9_10">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_9_10" class="btn-check" id="J_9_10" autocomplete="off" value="J_9_10">
+							<label class="btn btn-outline-primary" for="J_9_10">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_9_10" class="btn-check" id="V_9_10" autocomplete="off" value="V_9_10">
+							<label class="btn btn-outline-primary" for="V_9_10">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_9_10" class="btn-check" id="S_9_10" autocomplete="off" value="S_9_10">
+							<label class="btn btn-outline-primary" for="S_9_10">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							10 - 11
+						</td>
+						<td>
+							<input type="checkbox" name="L_10_11" class="btn-check" id="L_10_11" autocomplete="off" value="L_10_11">
+							<label class="btn btn-outline-primary" for="L_10_11">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_10_11" class="btn-check" id="M_10_11" autocomplete="off" value="M_10_11">
+							<label class="btn btn-outline-primary" for="M_10_11">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_10_11" class="btn-check" id="Mi_10_11" autocomplete="off" value="Mi_10_11">
+							<label class="btn btn-outline-primary" for="Mi_10_11">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_10_11" class="btn-check" id="J_10_11" autocomplete="off" value="J_10_11">
+							<label class="btn btn-outline-primary" for="J_10_11">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_10_11" class="btn-check" id="V_10_11" autocomplete="off" value="V_10_11">
+							<label class="btn btn-outline-primary" for="V_10_11">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_10_11" class="btn-check" id="S_10_11" autocomplete="off" value="S_10_11">
+							<label class="btn btn-outline-primary" for="S_10_11">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							11 - 12
+						</td>
+						<td>
+							<input type="checkbox" name="L_11_12" class="btn-check" id="L_11_12" autocomplete="off" value="L_11_12">
+							<label class="btn btn-outline-primary" for="L_11_12">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_11_12" class="btn-check" id="M_11_12" autocomplete="off" value="M_11_12">
+							<label class="btn btn-outline-primary" for="M_11_12">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_11_12" class="btn-check" id="Mi_11_12" autocomplete="off" value="Mi_11_12">
+							<label class="btn btn-outline-primary" for="Mi_11_12">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_11_12" class="btn-check" id="J_11_12" autocomplete="off" value="J_11_12">
+							<label class="btn btn-outline-primary" for="J_11_12">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_11_12" class="btn-check" id="V_11_12" autocomplete="off" value="V_11_12">
+							<label class="btn btn-outline-primary" for="V_11_12">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_11_12" class="btn-check" id="S_11_12" autocomplete="off" value="S_11_12">
+							<label class="btn btn-outline-primary" for="S_11_12">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							12 - 13
+						</td>
+						<td>
+							<input type="checkbox" name="L_12_13" class="btn-check" id="L_12_13" autocomplete="off" value="L_12_13">
+							<label class="btn btn-outline-primary" for="L_12_13">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_12_13" class="btn-check" id="M_12_13" autocomplete="off" value="M_12_13">
+							<label class="btn btn-outline-primary" for="M_12_13">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_12_13" class="btn-check" id="Mi_12_13" autocomplete="off" value="Mi_12_13">
+							<label class="btn btn-outline-primary" for="Mi_12_13">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_12_13" class="btn-check" id="J_12_13" autocomplete="off" value="J_12_13">
+							<label class="btn btn-outline-primary" for="J_12_13">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_12_13" class="btn-check" id="V_12_13" autocomplete="off" value="V_12_13">
+							<label class="btn btn-outline-primary" for="V_12_13">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_12_13" class="btn-check" id="S_12_13" autocomplete="off" value="S_12_13">
+							<label class="btn btn-outline-primary" for="S_12_13">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							13 - 14
+						</td>
+						<td>
+							<input type="checkbox" name="L_13_14" class="btn-check" id="L_13_14" autocomplete="off" value="L_13_14">
+							<label class="btn btn-outline-primary" for="L_13_14">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_13_14" class="btn-check" id="M_13_14" autocomplete="off" value="M_13_14">
+							<label class="btn btn-outline-primary" for="M_13_14">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_13_14" class="btn-check" id="Mi_13_14" autocomplete="off" value="Mi_13_14">
+							<label class="btn btn-outline-primary" for="Mi_13_14">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_13_14" class="btn-check" id="J_13_14" autocomplete="off" value="J_13_14">
+							<label class="btn btn-outline-primary" for="J_13_14">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_13_14" class="btn-check" id="V_13_14" autocomplete="off" value="V_13_14">
+							<label class="btn btn-outline-primary" for="V_13_14">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_13_14" class="btn-check" id="S_13_14" autocomplete="off" value="S_13_14">
+							<label class="btn btn-outline-primary" for="S_13_14">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							14 - 15
+						</td>
+						<td>
+							<input type="checkbox" name="L_14_15" class="btn-check" id="L_14_15" autocomplete="off" value="L_14_15">
+							<label class="btn btn-outline-primary" for="L_14_15">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_14_15" class="btn-check" id="M_14_15" autocomplete="off" value="M_14_15">
+							<label class="btn btn-outline-primary" for="M_14_15">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_14_15" class="btn-check" id="Mi_14_15" autocomplete="off" value="Mi_14_15">
+							<label class="btn btn-outline-primary" for="Mi_14_15">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_14_15" class="btn-check" id="J_14_15" autocomplete="off" value="J_14_15">
+							<label class="btn btn-outline-primary" for="J_14_15">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_14_15" class="btn-check" id="V_14_15" autocomplete="off" value="V_14_15">
+							<label class="btn btn-outline-primary" for="V_14_15">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_14_15" class="btn-check" id="S_14_15" autocomplete="off" value="S_14_15">
+							<label class="btn btn-outline-primary" for="S_14_15">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							15 - 16
+						</td>
+						<td>
+							<input type="checkbox" name="L_15_16" class="btn-check" id="L_15_16" autocomplete="off" value="L_15_16">
+							<label class="btn btn-outline-primary" for="L_15_16">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_15_16" class="btn-check" id="M_15_16" autocomplete="off" value="M_15_16">
+							<label class="btn btn-outline-primary" for="M_15_16">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_15_16" class="btn-check" id="Mi_15_16" autocomplete="off" value="Mi_15_16">
+							<label class="btn btn-outline-primary" for="Mi_15_16">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_15_16" class="btn-check" id="J_15_16" autocomplete="off" value="J_15_16">
+							<label class="btn btn-outline-primary" for="J_15_16">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_15_16" class="btn-check" id="V_15_16" autocomplete="off" value="V_15_16">
+							<label class="btn btn-outline-primary" for="V_15_16">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_15_16" class="btn-check" id="S_15_16" autocomplete="off" value="S_15_16">
+							<label class="btn btn-outline-primary" for="S_15_16">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							16 - 17
+						</td>
+						<td>
+							<input type="checkbox" name="L_16_17" class="btn-check" id="L_16_17" autocomplete="off" value="L_16_17">
+							<label class="btn btn-outline-primary" for="L_16_17">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_16_17" class="btn-check" id="M_16_17" autocomplete="off" value="M_16_17">
+							<label class="btn btn-outline-primary" for="M_16_17">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_16_17" class="btn-check" id="Mi_16_17" autocomplete="off" value="Mi_16_17">
+							<label class="btn btn-outline-primary" for="Mi_16_17">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_16_17" class="btn-check" id="J_16_17" autocomplete="off" value="J_16_17">
+							<label class="btn btn-outline-primary" for="J_16_17">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_16_17" class="btn-check" id="V_16_17" autocomplete="off" value="V_16_17">
+							<label class="btn btn-outline-primary" for="V_16_17">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_16_17" class="btn-check" id="S_16_17" autocomplete="off" value="S_16_17">
+							<label class="btn btn-outline-primary" for="S_16_17">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							17 - 18
+						</td>
+						<td>
+							<input type="checkbox" name="L_17_18" class="btn-check" id="L_17_18" autocomplete="off" value="L_17_18">
+							<label class="btn btn-outline-primary" for="L_17_18">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_17_18" class="btn-check" id="M_17_18" autocomplete="off" value="M_17_18">
+							<label class="btn btn-outline-primary" for="M_17_18">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_17_18" class="btn-check" id="Mi_17_18" autocomplete="off" value="Mi_17_18">
+							<label class="btn btn-outline-primary" for="Mi_17_18">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_17_18" class="btn-check" id="J_17_18" autocomplete="off" value="J_17_18">
+							<label class="btn btn-outline-primary" for="J_17_18">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_17_18" class="btn-check" id="V_17_18" autocomplete="off" value="V_17_18">
+							<label class="btn btn-outline-primary" for="V_17_18">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_17_18" class="btn-check" id="S_17_18" autocomplete="off" value="S_17_18">
+							<label class="btn btn-outline-primary" for="S_17_18">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							18 - 19
+						</td>
+						<td>
+							<input type="checkbox" name="L_18_19" class="btn-check" id="L_18_19" autocomplete="off" value="L_18_19">
+							<label class="btn btn-outline-primary" for="L_18_19">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_18_19" class="btn-check" id="M_18_19" autocomplete="off" value="M_18_19">
+							<label class="btn btn-outline-primary" for="M_18_19">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_18_19" class="btn-check" id="Mi_18_19" autocomplete="off" value="Mi_18_19">
+							<label class="btn btn-outline-primary" for="Mi_18_19">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_18_19" class="btn-check" id="J_18_19" autocomplete="off" value="J_18_19">
+							<label class="btn btn-outline-primary" for="J_18_19">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_18_19" class="btn-check" id="V_18_19" autocomplete="off" value="V_18_19">
+							<label class="btn btn-outline-primary" for="V_18_19">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_18_19" class="btn-check" id="S_18_19" autocomplete="off" value="S_18_19">
+							<label class="btn btn-outline-primary" for="S_18_19">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							19 - 20
+						</td>
+						<td>
+							<input type="checkbox" name="L_19_20" class="btn-check" id="L_19_20" autocomplete="off" value="L_19_20">
+							<label class="btn btn-outline-primary" for="L_19_20">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_19_20" class="btn-check" id="M_19_20" autocomplete="off" value="M_19_20">
+							<label class="btn btn-outline-primary" for="M_19_20">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_19_20" class="btn-check" id="Mi_19_20" autocomplete="off" value="Mi_19_20">
+							<label class="btn btn-outline-primary" for="Mi_19_20">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_19_20" class="btn-check" id="J_19_20" autocomplete="off" value="J_19_20">
+							<label class="btn btn-outline-primary" for="J_19_20">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_19_20" class="btn-check" id="V_19_20" autocomplete="off" value="V_19_20">
+							<label class="btn btn-outline-primary" for="V_19_20">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_19_20" class="btn-check" id="S_19_20" autocomplete="off" value="S_19_20">
+							<label class="btn btn-outline-primary" for="S_19_20">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							20 - 21
+						</td>
+						<td>
+							<input type="checkbox" name="L_20_21" class="btn-check" id="L_20_21" autocomplete="off" value="L_20_21">
+							<label class="btn btn-outline-primary" for="L_20_21">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_20_21" class="btn-check" id="M_20_21" autocomplete="off" value="M_20_21">
+							<label class="btn btn-outline-primary" for="M_20_21">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_20_21" class="btn-check" id="Mi_20_21" autocomplete="off" value="Mi_20_21">
+							<label class="btn btn-outline-primary" for="Mi_20_21">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_20_21" class="btn-check" id="J_20_21" autocomplete="off" value="J_20_21">
+							<label class="btn btn-outline-primary" for="J_20_21">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_20_21" class="btn-check" id="V_20_21" autocomplete="off" value="V_20_21">
+							<label class="btn btn-outline-primary" for="V_20_21">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_20_21" class="btn-check" id="S_20_21" autocomplete="off" value="S_20_21">
+							<label class="btn btn-outline-primary" for="S_20_21">si</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							21 - 22
+						</td>
+						<td>
+							<input type="checkbox" name="L_21_22" class="btn-check" id="L_21_22" autocomplete="off" value="L_21_22">
+							<label class="btn btn-outline-primary" for="L_21_22">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="M_21_22" class="btn-check" id="M_21_22" autocomplete="off" value="M_21_22">
+							<label class="btn btn-outline-primary" for="M_21_22">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="Mi_21_22" class="btn-check" id="Mi_21_22" autocomplete="off" value="Mi_21_22">
+							<label class="btn btn-outline-primary" for="Mi_21_22">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="J_21_22" class="btn-check" id="J_21_22" autocomplete="off" value="J_21_22">
+							<label class="btn btn-outline-primary" for="J_21_22">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="V_21_22" class="btn-check" id="V_21_22" autocomplete="off" value="V_21_22">
+							<label class="btn btn-outline-primary" for="V_21_22">si</label>
+						</td>
+						<td>
+							<input type="checkbox" name="S_21_22" class="btn-check" id="S_21_22" autocomplete="off" value="S_21_22">
+							<label class="btn btn-outline-primary" for="S_21_22">si</label>
+						</td>
+					</tr>
+				</div>
+				</form>
+			</table>
+		</div>
+	</div>
+
+    <!-- BOOSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

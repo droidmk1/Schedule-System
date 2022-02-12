@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/css/normalize.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="icon" type="image/png" href="static/css/img/gato1.png" sizes="32x32"/>
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+	<title>Ver Horarios</title>
+	<script src="https://kit.fontawesome.com/b11650a0a6.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<!-- <h1>Ver Horarios</h1>
+	<div class="contenedor1">
+		<table>
+			<tr>
+				<th>Facultad</th>
+				<th>Carrera</th>
+				<th>Año</th>
+			</tr>
+			<tr>
+				<td>Ciencias Matematicas</td>
+				<td>Computacion Cientifica</td>
+				<td><a href="#">Ver Pdf</a></td>
+			</tr>
+			<tr>
+				<td>Derecho y Ciencias Sociales</td>
+				<td>Derecho</td>
+				<td><a href="#">Ver Pdf</a></td>
+			</tr>
+		</table>
+		<a href="/system">
+			<button>Inicio</button>
+		</a>
+	</div> -->
+	<div class="bg-verhorarios">
+		<div class="relative">
+			<div class="system-titulo system-titulo--negro">
+				<h1>Ver Horarios</h1>
+			</div>
+			<div class="contenedor-tabla-horarios">
+				<table class="tabla-horarios">
+					<tr class="tabla-horarios__row">
+						<th class="tabla-horarios__head">Facultad</th>
+						<th class="tabla-horarios__head">Carrera</th>
+						<th class="tabla-horarios__head">Periodo</th>
+					</tr>
+					<tr class="tabla-horarios__row">
+						<td class="tabla-horarios__data">Ciencias Matematicas</td>
+						<td class="tabla-horarios__data">Computacion Cientifica</td>
+						<td class="tabla-horarios__data"><a title="Ver PDF" href="#" class="tabla-horarios__boton"><i class="fas fa-file-pdf"></i> </a></td>
+					</tr>
+					<tr class="tabla-horarios__row">
+						<td class="tabla-horarios__data">Derecho y Ciencias Sociales</td>
+						<td class="tabla-horarios__data">Derecho</td>
+						<td class="tabla-horarios__data"><a title="Ver PDF" href="#" class="tabla-horarios__boton"><i class="fas fa-file-pdf"></i> </a></td>
+					</tr>
+				</table>
+			</div>
+			<a class="system-contenedor-principal__boton--horario" href="/system">
+				<button class="system-contenedor-principal__boton "><i class="fas fa-home"></i><br> Inicio</button>
+			</a>
+		</div>
+	</div>
+	<div class="sanmarcos">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/UNMSM_coatofarms_seal.svg/1200px-UNMSM_coatofarms_seal.svg.png" alt=""> 
+	</div>
+	
+
+</body>
+</html>
